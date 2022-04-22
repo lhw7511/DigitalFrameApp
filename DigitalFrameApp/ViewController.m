@@ -12,6 +12,12 @@
 @end
 
 @implementation ViewController
+
+@synthesize imgView;
+@synthesize toggleButton;
+@synthesize speedSlider;
+@synthesize speedLabel;
+
 -(IBAction)toggleAction:(id)sender{
     if([imgView isAnimating]){
         [imgView stopAnimating];
@@ -23,8 +29,14 @@
     
 }
 
-@synthesize imgView;
-@synthesize toggleButton;
+-(IBAction)changeSpeedAction:(id)sender{
+    imgView.animationDuration = 15 - speedSlider.value;
+    [imgView startAnimating];
+    [toggleButton setTitle:@"STOP" forState:UIControlStateNormal];
+    NSString *str = [[NSString alloc]initWithFormat:@"%f",speedSlider.value];
+    speedLabel.text =str;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSArray *Images = [[NSArray alloc]initWithObjects:

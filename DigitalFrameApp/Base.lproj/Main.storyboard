@@ -23,6 +23,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="2U2-nv-EPi">
                                 <rect key="frame" x="18" y="660" width="225" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeSpeedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hec-5l-f6k"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JW-fE-WC6">
                                 <rect key="frame" x="296" y="664" width="46" height="21"/>
@@ -47,6 +50,8 @@
                     </view>
                     <connections>
                         <outlet property="imgView" destination="fmU-0H-BCz" id="hA1-VP-Ylg"/>
+                        <outlet property="speedLabel" destination="2JW-fE-WC6" id="DrL-H9-0fX"/>
+                        <outlet property="speedSlider" destination="2U2-nv-EPi" id="ONr-Dv-3QU"/>
                         <outlet property="toggleButton" destination="EWS-wk-AGQ" id="kFY-mT-dAE"/>
                     </connections>
                 </viewController>
